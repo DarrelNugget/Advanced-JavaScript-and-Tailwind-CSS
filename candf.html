@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!--This Part was done by Chester-->
+    <!--Navigation Bar-->
+    <nav class="bg-gray-100">
+        <div class="px-8 mx-auto border border-black">
+            <div class="flex justify-around">
+
+                <a href="pandk.html">Pounds and Kilograms</a>
+
+                <a href="mandk.html">Miles and Kilometres<a>
+
+                <a href="candf.html">Celsius and Fahrenheit</a>
+
+
+            </div>
+        </div>
+    </nav>
+    <h1 class="text-center text-3xl  "><b>Celsius and Fahrenheit</b></h1>
+    <!--Celsuis to Fahrenheit Section-->
+    <h2>Celsuis to Fahrenheit</h2>
+    <p>
+        <label>Celsuis</label>
+        <input id="inputMiles" type="number" placeholder="Input Here" oninput="celsuisToFahrenheit(this.value)" onchange="celsuisToFahrenheit(this.value)">
+    </p> 
+    <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+    <br>
+    <!--Fahrenheit to Celsuis Section-->
+    <h2>Fahrenheit to Celsuis</h2>
+    <p>
+        <label>Fahrenheit</label>
+        <input id="inputMiles" type="number" placeholder="Input Here" oninput="fahrenheitToCelsuis(this.value)" onchange="fahrenheitToCelsuis(this.value)">
+    </p> 
+    <p>Celsuis: <span id="outputCelcius"></span></p>
+
+    <script>
+        //Celsuis to fahrenheit convertions
+        function celsuisToFahrenheit(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+        }
+        //Fahrrenheit to celsuis convertions
+        function fahrenheitToCelsuis(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+        }
+        </script>
+</body>
+</html>

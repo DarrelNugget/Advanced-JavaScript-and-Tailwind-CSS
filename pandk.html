@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!--This Part was done by Darrel-->
+    <!--Navigation Bar-->
+    <nav class="bg-gray-100">
+        <div class="px-8 mx-auto border border-black">
+            <div class="flex justify-around">
+
+                <a href="pandk.html">Pounds and Kilograms</a>
+
+                <a href="mandk.html">Miles and Kilometres<a>
+
+                <a href="candf.html">Celsius and Fahrenheit</a>
+
+
+            </div>
+        </div>
+    </nav>
+    <h1 class="text-center text-3xl  "><b>Pounds and Killograms</b></h1>
+    <!--Pounds to Kilograms Section-->
+    <h2>Pounds to Kilograms</h2>
+    <p>
+        <label>Pounds</label>
+        <input id="inputPounds" type="number" placeholder="Input Here" oninput="poundsToKilograms(this.value)" onchange="poundsToKilograms(this.value)">
+    </p>
+    <p>Kilograms: <span id="outputKilograms"></span></p>
+    <br>
+    <!--Kilograms to Pounds Section-->
+    <h2>Kilograms to Pounds</h2>
+    <p>
+        <label>Kilograms</label>
+        <input id="inputKilograms" type="number" placeholder="Input Here" oninput="kilogramsToPounds(this.value)" onchange="kilogramsToPounds(this.value)">
+    </p>
+    <p>Pounds: <span id="outputPounds"></span></p>
+
+
+<script>
+//Pounds to kilograms convertions
+function poundsToKilograms(valNum) {
+  document.getElementById("outputKilograms").innerHTML=valNum/2.2046;
+}
+//Kilograms to pounds convertions
+function kilogramsToPounds(valNum) {
+  document.getElementById("outputPounds").innerHTML=valNum*2.2046;
+}
+</script>
+
+
+</body>
+</html>

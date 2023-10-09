@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!--This Part was done by Erwin-->
+    
+    <!--Navigation Bar-->
+    <nav class="bg-gray-100">
+        <div class="px-8 mx-auto border border-black">
+            <div class="flex justify-around">
+
+                <a href="pandk.html">Pounds and Kilograms</a>
+
+                <a href="mandk.html">Miles and Kilometres<a>
+
+                <a href="candf.html">Celsius and Fahrenheit</a>
+
+
+            </div>
+        </div>
+    </nav>
+    <h1 class="text-center text-3xl  "><b>Miles and Kilometres</b></h1>
+    <!--Miles to Kilometres Section-->
+    <h2>Miles to Kilometres</h2>
+    <p>
+        <label>Miles</label>
+        <input id="inputMiles" type="number" placeholder="Input Here" oninput="milesToKilometres(this.value)" onchange="milesToKilometres(this.value)">
+    </p> 
+    <p>Kilometers: <span id="outputKilometers"></span></p>
+    <br>
+    <!--Kilometres to Miles Section-->
+    <h2>Kilometres to Miles</h2>
+    <p>
+        <label>Kilometers</label>
+        <input id="inputMiles" type="number" placeholder="Input Here" oninput="kilometresToMiles(this.value)" onchange="kilometresToMiles(this.value)">
+    </p> 
+    <p>Miles: <span id="outputMiles"></span></p>
+
+    <script>
+        //Miles to kilometres Convertions
+        function milesToKilometres(valNum) {
+          document.getElementById("outputKilometers").innerHTML=valNum/0.62137;
+        }
+        //Kilometres to miles Convertions
+        function kilometresToMiles(valNum) {
+          document.getElementById("outputMiles").innerHTML=valNum*0.62137;
+        }
+    </script>
+</body>
+</html>
